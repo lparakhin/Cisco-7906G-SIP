@@ -3,7 +3,10 @@ Cisco 7906G SIP Configuration Files (for 3rd party PBXs)
 
 ### TFTP/DHCP Configuration
 
-During boot the handsets will discover the TFTP server via DHCP option 66 and/or DHCP option 150. For this example I set option 66 of our VoIP VLAN to the local IP address of our TFTP server. All of the configuration files, firmware files and other customisation files reside in the root directory of the TFTP server, in this case it was `\TFTPBOOT`.
+During boot the handsets will discover the TFTP server via DHCP option 66 and/or DHCP option 150. For this example I set option 66 of our VoIP VLAN to the local IP address of our TFTP server. All of the configuration files, firmware files and other customisation files reside in the root directory of the TFTP server, in this case it was `\TFTPBOOT`. Download portable TFTP server here http://tftpd32.jounin.net/tftpd32_download.html, set IP address and option.
+
+![image](https://user-images.githubusercontent.com/78740726/206427679-10181ef1-ced4-49dd-b59c-5a42435e2cee.png)
+
 
 ### Base Configuration Files
 
