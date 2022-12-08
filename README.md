@@ -34,5 +34,25 @@ I have included a `ringlist.xml` file as an example of how to add new ringtones 
 
 When including ringtone .raw files, it's simplest to include them in the root directory of the TFTP server along with the firmware and configuration files.
 
+### Reset
+
+#Soft Reset
+
+The code for the soft factory reset is: 123456789*0#
+A soft reset does the following:
+5. deletes key files on the phone including /etc/init.tab
+6. reboots
+7. phone recovers default loads file from TFTP server
+
+#Total Hard Reset
+
+The code for the total hard reset is: 3491672850*#
+A total hard reset formats /flash0 blowing away everything except CNU. All settings and personalization of the phone is removed.
+
+#Hard Reset with Network Setting Preservation
+
+The code for the network preservation hard reset is: *7412369#085
+And it also does a complete format of /flash0 — yet it preserves the network settings so that after the format, any static IP and other network settings are preserved. The settings are stored in volatile RAM, so it is important to not remove power to the phone during this process.
+
 
 
